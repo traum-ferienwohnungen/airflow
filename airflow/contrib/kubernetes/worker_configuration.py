@@ -68,6 +68,9 @@ class WorkerConfiguration(LoggingMixin):
         }, {
             'name': 'GIT_SYNC_ONE_TIME',
             'value': 'true'
+        }, {
+            'name': 'GIT_SYNC_MAX_SYNC_FAILURES',
+            'value': self.kube_config.git_sync_max_sync_failures
         }]
         if self.kube_config.git_user:
             init_environment.append({
